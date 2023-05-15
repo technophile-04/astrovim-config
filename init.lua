@@ -48,10 +48,24 @@ return {
       --   return true
       -- end
     },
-    -- enable servers that you already have installed without mason
+     -- enable servers that you already have installed without mason
     servers = {
-      -- "pyright"
+        -- "pyright",
+        "nomic_solidity"
     },
+    config = {
+      -- Add custom Nomic solidity LSP
+			nomic_solidity = function()
+			  local lspconfig = require "lspconfig"
+			  local lspconfig_util = lspconfig.util
+			  return {
+				  cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+				  root_dir = lspconfig_util.root_pattern({"package.json"}),
+				  filetypes = { "solidity" },
+				  single_file_support = true,
+			  }
+      end,
+    } 
   },
 
   -- Configure require("lazy").setup() options
