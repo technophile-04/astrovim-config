@@ -6,5 +6,8 @@ return {
 
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.colorscheme.tokyonight"},
-  { import = "astrocommunity.completion.copilot-lua-cmp" }
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim"},
+  { import = "astrocommunity.motion.mini-move"},
+  { import = "astrocommunity.motion.nvim-surround"},
 }
