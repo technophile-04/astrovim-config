@@ -12,5 +12,8 @@ return {
   {
     'wakatime/vim-wakatime',
     event = "User AstroFile"
+  },
+  {
+    'windwp/nvim-ts-autotag',
   }
 }
