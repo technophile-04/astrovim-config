@@ -10,24 +10,14 @@ return {
   --   end,
   -- },
   {
-    'wakatime/vim-wakatime',
-    event = "User AstroFile"
+    "wakatime/vim-wakatime",
+    event = "User AstroFile",
   },
   {
-    'windwp/nvim-ts-autotag',
-  },
-  {
-    'jinh0/eyeliner.nvim',
-    config = function()
-        require('eyeliner').setup({
-          highlight_on_key = true, -- show highlights only after keypress
-          dim = true -- dim all other characters if set to true (recommended!)
-        })
-    end,
-    event = "User AstroFile"
+    "windwp/nvim-ts-autotag",
   },
   {
     "f-person/git-blame.nvim",
     event = "User AstroGitFile",
-  }
+  },
 }

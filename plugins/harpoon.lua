@@ -12,4 +12,5 @@ return {
     { "<C-l>", function() require("harpoon.ui").nav_file(3) end, desc = "Nav file 3" },
     { "<C-;>", function() require("harpoon.ui").nav_file(4) end, desc = "Nav file 4" },
   },
+  event = "User AstroFile",
 }
