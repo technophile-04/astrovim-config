@@ -1,5 +1,5 @@
 -- customize mason plugins
- local function remove_item_from_list(list, item)
+local function remove_item_from_list(list, item)
   for i, v in ipairs(list) do
     if v == item then
       table.remove(list, i)
@@ -28,8 +28,8 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astronvim.utils").list_insert_unique(opts.ensure_installed, {
-        "eslint-lsp",
         "prettier",
+        "eslint-lsp",
       })
       remove_item_from_list(opts.ensure_installed, "eslint_d")
       remove_item_from_list(opts.ensure_installed, "prettierd")
